@@ -1,0 +1,69 @@
+#!/bin/sh -e
+#
+#
+# On Linux systems, this should be installed as,
+# or merged into, /etc/rc.local.
+# On other systems, you'll just have to figure it out.
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+if [ ! -e /var/log/asterisk/cdr-csv ]; then
+	mkdir -p /var/log/asterisk/cdr-csv
+fi
+
+# start asterisk
+if [ ! -e /var/run/asterisk ]; then
+	asterisk
+fi
+
+# create the tmpfs /var/run directory
+if [ ! -e /var/run/OpenBTS ]; then
+	mkdir /var/run/OpenBTS
+fi
+if [ ! -e /var/run/rrlp ]; then
+	mkdir /var/run/rrlp
+	chmod 777 /var/run/rrlp
+fi
+
+if [ ! -e /var/lib/OpenBTS ]; then
+	mkdir /var/lib/OpenBTS
+fi
+
+# sleep for 10 seconds to allow /proc to get stable
+sleep 10
+
+
+# This script assumes that the following are installed in /OpenBTS:
+#  * OpenBTS
+#  * Transceiver
+#  * ezusb.ihx
+#  * fpga.rbf
+#  * runloop.sh for OpenBTS.
+
+# start OpenBTS
+cd /OpenBTS ; sudo screen -S OpenBTS -d -m ./runloop.OpenBTS.sh
+
+
+# This script assumes that the following are installed in /smqueue:
+#  * smqueue
+#  * smqueue.db
+#  * runloop.sh for smqueue
+
+# start smqueue
+cd /OpenBTS ; sudo screen -S smqueue -d -m ./runloop.smqueue.sh
+
+# start the subscriber registry
+cd /OpenBTS ; sudo screen -S sipauth -d -m ./runloop.sipauthserve.sh
+
+
+
+exit 0
