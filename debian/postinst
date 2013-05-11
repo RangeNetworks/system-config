@@ -20,6 +20,8 @@ set -e
 configure() {
 	chown openbts:openbts /home/openbts/rangeSupport
 	chmod +x /home/openbts/rangeSupport
+
+	a2enmod authnz_external
 }
 
 case "$1" in

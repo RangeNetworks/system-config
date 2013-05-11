@@ -25,7 +25,7 @@ clean::
 install: 
 	mkdir -p debian/tmp/etc/
 	mkdir -p debian/tmp/etc/network/
-	mkdir -p debian/tmp/etc/apache2/
+	mkdir -p debian/tmp/etc/apache2/conf.d/
 	mkdir -p debian/tmp/etc/bind/
 	mkdir -p debian/tmp/home/openbts/
 	cp rc.local.example debian/tmp/etc/rc.local
@@ -33,6 +33,7 @@ install:
 	cp interfaces debian/tmp/etc/network/interfaces
 	cp ntp.conf debian/tmp/etc/ntp.conf
 	cp httpd.conf debian/tmp/etc/apache2/httpd.conf
+	cp auth debian/tmp/etc/apache2/conf.d/auth
 	cp named.conf.options debian/tmp/etc/bind/named.conf.options
 	cp rangeSupport debian/tmp/home/openbts/
 
