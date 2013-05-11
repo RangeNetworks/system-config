@@ -13,7 +13,7 @@ Section: comm
 Priority: optional
 Architecture: any
 Essential: no
-Depends: libapache2-mod-authnz-external, pwauth
-Replaces: ntp, ntpdate, apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog
-Breaks: ntp, ntpdate, apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog
+Depends: libapache2-mod-authnz-external, pwauth, ntp, ntpdate, apache2, bind9, rsyslog
+Replaces: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
+#Breaks: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
 Description: OpenBTS Commercial software.
