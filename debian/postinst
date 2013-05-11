@@ -22,6 +22,8 @@ configure() {
 	chmod +x /home/openbts/rangeSupport
 
 	a2enmod authnz_external
+
+	/etc/init.d/apache2 restart
 }
 
 case "$1" in
