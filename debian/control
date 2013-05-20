@@ -8,10 +8,12 @@ Standards-Version: 3.7.3
 
 
 Package: range-configs
-Version: 3.1.0
+Version: TRUNK
 Section: comm
 Priority: optional
 Architecture: any
 Essential: no
-Depends:
+Depends: libapache2-mod-authnz-external, pwauth, ntp, ntpdate, apache2, bind9, rsyslog
+Replaces: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
+#Breaks: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
 Description: OpenBTS Commercial software.
