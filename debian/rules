@@ -30,8 +30,7 @@ install:
 	mkdir -p debian/tmp/home/openbts/
 	cp rc.local.example debian/tmp/etc/rc.local
 	cp rsyslog.conf debian/tmp/etc/rsyslog.conf
-	# Disabled until we find a way to distribute recommended changes without clobbering customer configs!
-	# cp interfaces debian/tmp/etc/network/interfaces
+	cp interfaces debian/tmp/etc/network/interfaces
 	cp ntp.conf debian/tmp/etc/ntp.conf
 	cp httpd.conf debian/tmp/etc/apache2/httpd.conf
 	cp auth debian/tmp/etc/apache2/conf.d/auth
