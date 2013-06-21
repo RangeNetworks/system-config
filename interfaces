@@ -20,7 +20,7 @@ iface eth0 inet static
         dns-nameservers 192.168.0.22
 
 # Please DO NOT EDIT THIS.
-# You may loose access to your 5150 if you edit this.
+# You may lose access to your device if you edit this.
 auto eth0:1
 iface eth0:1 inet static
     name Console
