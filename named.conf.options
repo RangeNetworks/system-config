@@ -1,6 +1,11 @@
 options {
 	directory "/var/cache/bind";
 
+	// Update the ACLs below to restrict access to the DNS service if this machine will do DNS.
+	allow-recursion { any; };
+	allow-query { any; };
+	allow-query-cache { any; };
+
 	// If there is a firewall between you and nameservers you want
 	// to talk to, you may need to fix the firewall to allow multiple
 	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
