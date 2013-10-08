@@ -29,6 +29,9 @@ fi
 if [ ! -e /var/run/OpenBTS ]; then
 	mkdir /var/run/OpenBTS
 fi
+if [ ! -e /var/run/OpenNodeB ]; then
+        mkdir /var/run/OpenNodeB
+fi
 if [ ! -e /var/run/rrlp ]; then
 	mkdir /var/run/rrlp
 	chmod 777 /var/run/rrlp
@@ -50,7 +53,7 @@ sleep 10
 #  * runloop.sh for OpenBTS.
 
 # start OpenBTS
-cd /OpenBTS ; sudo screen -S OpenBTS -d -m ./runloop.OpenBTS.sh
+#cd /OpenBTS ; sudo screen -S OpenBTS -d -m ./runloop.OpenBTS.sh
 
 
 # This script assumes that the following are installed in /smqueue:
@@ -59,10 +62,10 @@ cd /OpenBTS ; sudo screen -S OpenBTS -d -m ./runloop.OpenBTS.sh
 #  * runloop.sh for smqueue
 
 # start smqueue
-cd /OpenBTS ; sudo screen -S smqueue -d -m ./runloop.smqueue.sh
+#cd /OpenBTS ; sudo screen -S smqueue -d -m ./runloop.smqueue.sh
 
 # start the subscriber registry
-cd /OpenBTS ; sudo screen -S sipauth -d -m ./runloop.sipauthserve.sh
+#cd /OpenBTS ; sudo screen -S sipauth -d -m ./runloop.sipauthserve.sh
 
 # make sure permissions are set up correctly
 sleep 2
