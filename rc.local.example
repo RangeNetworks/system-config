@@ -44,31 +44,7 @@ fi
 # sleep for 10 seconds to allow /proc to get stable
 sleep 10
 
-
-# This script assumes that the following are installed in /OpenBTS:
-#  * OpenBTS
-#  * Transceiver
-#  * ezusb.ihx
-#  * fpga.rbf
-#  * runloop.sh for OpenBTS.
-
-# start OpenBTS
-#cd /OpenBTS ; sudo screen -S OpenBTS -d -m ./runloop.OpenBTS.sh
-
-
-# This script assumes that the following are installed in /smqueue:
-#  * smqueue
-#  * smqueue.db
-#  * runloop.sh for smqueue
-
-# start smqueue
-#cd /OpenBTS ; sudo screen -S smqueue -d -m ./runloop.smqueue.sh
-
-# start the subscriber registry
-#cd /OpenBTS ; sudo screen -S sipauth -d -m ./runloop.sipauthserve.sh
-
 # make sure permissions are set up correctly
-sleep 2
 chown -R root:www-data /var/lib/asterisk/sqlite3dir
 chmod 775 /var/lib/asterisk/sqlite3dir
 chmod 664 /var/lib/asterisk/sqlite3dir/sqlite3*

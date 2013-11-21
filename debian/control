@@ -8,7 +8,6 @@ Standards-Version: 3.7.3
 
 
 Package: range-configs
-Version: TRUNK
 Section: comm
 Priority: optional
 Architecture: any
