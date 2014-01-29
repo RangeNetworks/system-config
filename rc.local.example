@@ -16,15 +16,6 @@
 #
 # By default this script does nothing.
 
-if [ ! -e /var/log/asterisk/cdr-csv ]; then
-	mkdir -p /var/log/asterisk/cdr-csv
-fi
-
-# start asterisk
-if [ ! -e /var/run/asterisk ]; then
-	asterisk
-fi
-
 # create the tmpfs /var/run directory
 if [ ! -e /var/run/OpenBTS ]; then
 	mkdir /var/run/OpenBTS
@@ -40,9 +31,6 @@ fi
 if [ ! -e /var/lib/OpenBTS ]; then
 	mkdir /var/lib/OpenBTS
 fi
-
-# sleep for 10 seconds to allow /proc to get stable
-sleep 10
 
 # make sure permissions are set up correctly
 chown -R root:www-data /var/lib/asterisk/sqlite3dir
