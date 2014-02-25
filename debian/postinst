@@ -24,6 +24,8 @@ configure() {
 	a2enmod authnz_external
 
 	/etc/init.d/apache2 restart
+
+	update-grub
 }
 
 case "$1" in
