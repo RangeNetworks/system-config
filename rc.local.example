@@ -17,6 +17,9 @@
 # By default this script does nothing.
 
 # create the tmpfs /var/run directory
+if [ ! -e /var/run/OpenBTS ]; then
+	mkdir /var/run/OpenBTS
+fi
 if [ ! -e /var/run/rrlp ]; then
 	mkdir /var/run/rrlp
 	chmod 777 /var/run/rrlp
