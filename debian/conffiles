@@ -2,6 +2,4 @@
 /etc/rsyslog.conf
 /etc/network/interfaces
 /etc/ntp.conf
-/etc/apache2/httpd.conf
-/etc/apache2/conf.d/auth
 /etc/bind/named.conf.options

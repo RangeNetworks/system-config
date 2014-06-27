@@ -18,10 +18,6 @@ set -e
 # the debian-policy package
 
 configure() {
-	a2enmod authnz_external
-
-	/etc/init.d/apache2 restart
-
 	update-grub
 }
 
