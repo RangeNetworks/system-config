@@ -1,3 +1,0 @@
-AddExternalAuth pwauth /usr/sbin/pwauth
-SetExternalAuthMethod pwauth pipe
-

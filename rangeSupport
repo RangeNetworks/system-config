@@ -1,9 +1,0 @@
-#!/bin/bash
-
-SUPPORT_HOST=173.247.200.212
-
-read -p "Please enter a numeric passcode, then press enter: " EXTPORT
-
-
-ssh -N -R ${EXTPORT}:localhost:22 rangesupport@${SUPPORT_HOST}
-
