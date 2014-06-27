@@ -10,7 +10,7 @@ Standards-Version: 3.7.3
 Package: range-configs
 Section: comm
 Priority: optional
-Architecture: any
+Architecture: all
 Essential: no
 Depends: libapache2-mod-authnz-external, pwauth, ntp, ntpdate, apache2, bind9, rsyslog, resolvconf
 Replaces: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), apache2 (<< 1:2.2.22), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
