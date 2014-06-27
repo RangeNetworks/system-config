@@ -31,7 +31,6 @@ install:
 	mkdir -p debian/tmp/etc/apache2/conf.d/
 	mkdir -p debian/tmp/etc/bind/
 	mkdir -p debian/tmp/etc/default/
-	mkdir -p debian/tmp/home/openbts/
 	cp rc.local.example debian/tmp/etc/rc.local
 	cp rsyslog.conf debian/tmp/etc/rsyslog.conf
 	cp interfaces debian/tmp/etc/network/interfaces
@@ -39,7 +38,6 @@ install:
 	cp httpd.conf debian/tmp/etc/apache2/httpd.conf
 	cp auth debian/tmp/etc/apache2/conf.d/auth
 	cp named.conf.options debian/tmp/etc/bind/named.conf.options
-	cp rangeSupport debian/tmp/home/openbts/
 	cp bind9 debian/tmp/etc/default/bind9
 	cp grub debian/tmp/etc/default/grub
 
