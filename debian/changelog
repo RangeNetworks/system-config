@@ -1,4 +1,4 @@
-range-configs (5.0) unstable; urgency=low
+range-configs (5.0.0-systest.1-sha1.b28bce69fd) unstable; urgency=low
 
     * Test
 
