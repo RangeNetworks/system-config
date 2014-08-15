@@ -1,4 +1,3 @@
-/etc/rc.local
 /etc/rsyslog.conf
 /etc/network/interfaces
 /etc/ntp.conf

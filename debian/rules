@@ -30,7 +30,6 @@ install:
 	mkdir -p debian/tmp/etc/network/
 	mkdir -p debian/tmp/etc/bind/
 	mkdir -p debian/tmp/etc/default/
-	cp rc.local.example debian/tmp/etc/rc.local
 	cp rsyslog.conf debian/tmp/etc/rsyslog.conf
 	cp interfaces debian/tmp/etc/network/interfaces
 	cp ntp.conf debian/tmp/etc/ntp.conf
