@@ -13,5 +13,5 @@ Priority: optional
 Architecture: all
 Essential: no
 Depends: ntp, ntpdate, bind9, rsyslog, resolvconf
-Replaces: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), bind9 (<< 1:9.8.1), rsyslog (<< 1:5.8.7)
+Replaces: ntp (<< 1:4.2.7), ntpdate (<< 1:4.2.7), bind9 (<< 1:9.8.1)
 Description: Range Networks - Misc Default Configurations
