@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # postinst script for test
 #
 # see: dh_installdeb(1)
@@ -17,22 +17,16 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-configure() {
-	update-grub
-}
-
 case "$1" in
-    configure)
-	configure
-    ;;
-
-    abort-upgrade|abort-remove|abort-deconfigure)
-    ;;
-
-    *)
+configure)
+	echo "nothing to configure"
+	;;
+abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+*)
         echo "postinst called with unknown argument \`$1'" >&2
         exit 1
-    ;;
+	;;
 esac
 
 # dh_installdeb will replace this with shell code automatically

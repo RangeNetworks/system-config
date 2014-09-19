@@ -30,7 +30,6 @@ install:
 	cp named.conf.options debian/tmp/etc/bind/named.conf.options
 	mkdir -p debian/tmp/etc/default/
 	cp bind9 debian/tmp/etc/default/bind9
-	cp grub debian/tmp/etc/default/grub
 
 binary-indep: install
 	dh_testdir
