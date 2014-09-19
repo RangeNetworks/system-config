@@ -26,15 +26,12 @@ clean::
 	rm -rf debian/tmp 
 
 install: 
-	mkdir -p debian/tmp/etc/
-	mkdir -p debian/tmp/etc/network/
 	mkdir -p debian/tmp/etc/bind/
-	mkdir -p debian/tmp/etc/default/
-	cp interfaces debian/tmp/etc/network/interfaces
-	cp ntp.conf debian/tmp/etc/ntp.conf
 	cp named.conf.options debian/tmp/etc/bind/named.conf.options
+	mkdir -p debian/tmp/etc/default/
 	cp bind9 debian/tmp/etc/default/bind9
 	cp grub debian/tmp/etc/default/grub
+	cp ntp.conf debian/tmp/etc/ntp.conf
 
 binary-indep: install
 	dh_testdir
