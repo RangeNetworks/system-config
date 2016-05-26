@@ -23,13 +23,13 @@ export DH_OPTIONS
 clean::
 	dh_testdir
 	dh_clean
-	rm -rf debian/tmp 
+	rm -rf debian/range-configs
 
 install: 
-	mkdir -p debian/tmp/etc/bind/
-	cp named.conf.options debian/tmp/etc/bind/named.conf.options
-	mkdir -p debian/tmp/etc/default/
-	cp bind9 debian/tmp/etc/default/bind9
+	mkdir -p debian/range-configs/etc/bind/
+	cp named.conf.options debian/range-configs/etc/bind/named.conf.options
+	mkdir -p debian/range-configs/etc/default/
+	cp bind9 debian/range-configs/etc/default/bind9
 
 binary-indep: install
 	dh_testdir
